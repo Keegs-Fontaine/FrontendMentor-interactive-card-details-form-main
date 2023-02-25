@@ -1,0 +1,55 @@
+@use "../globals" as *;
+
+.card-container {
+  padding-inline: 1rem;
+  background-image: url("../images/bg-main-mobile.png");
+
+  > * {
+    border-radius: 0.5rem;
+  }
+
+  .card-front {
+    @include flex(flex, space-between, start, column);
+    transform: translateY(50%);
+    min-width: 15rem;
+    width: 80%;
+    max-width: 22rem;
+    aspect-ratio: 1.85;
+    padding: 1rem;
+    background-image: url("../images/bg-card-front.png");
+    color: $clr-neutral-999;
+
+    &__pfp {
+      position: relative;
+      width: 2rem;
+      aspect-ratio: 1;
+      background-color: $clr-neutral-999;
+      border-radius: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 140%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        aspect-ratio: inherit;
+        border: 2px solid $clr-neutral-999;
+        border-radius: inherit;
+      }
+    }
+
+    &__details {
+      width: 100%;
+    }
+
+    &__number {
+      @include flex();
+      font-size: clamp(1.1rem, 5vw, 1.6rem);
+    }
+
+    &__name {
+      @include flex();
+    }
+  }
+}
