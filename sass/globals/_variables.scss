@@ -1,0 +1,18 @@
+////////////////////////////////
+// COLORS
+////////////////////////////////
+
+//Primary
+$clr-gradient: linear-gradient(
+  to right,
+  hsl(249, 99%, 64%),
+  hsl(278, 94%, 30%)
+);
+
+$clr-primary-light: hsl(0, 100%, 66%);
+
+//Neutral
+$clr-neutral-999: hsl(0, 0%, 100%);
+$clr-neutral-800: hsl(270, 3%, 87%);
+$clr-neutral-500: hsl(279, 6%, 55%);
+$clr-neutral-200: hsl(278, 68%, 11%);
