@@ -37,6 +37,50 @@
     </style>
   </head>
   <body>
+    <section class="card-container">
+      <article class="card-front">
+        <div class="card-front__pfp"></div>
+        <p class="card-front__number">
+          <span>0000</span>
+          <span>0000</span>
+          <span>0000</span>
+          <span>0000</span>
+        </p>
+        <div class="card-front__details">
+          <p class="name">felicia leire</p>
+          <p class="date">00/00</p>
+        </div>
+      </article>
+      <article class="card-back">
+        <p class="card-back__cvc">000</p>
+      </article>
+    </section>
+
+    <main>
+      <form action="" class="form">
+        <section class="form__name">
+          <label for="name">cardholder name</label>
+          <input type="text" id="name" />
+        </section>
+        <section class="form__num">
+          <label for="number">card number</label>
+          <input type="number" id="number" />
+        </section>
+        <section class="form__date">
+          <fieldset>
+            <legend>exp. date (mm/yy)</legend>
+            <input type="number" id="month" />
+            <input type="number" id="year" />
+          </fieldset>
+        </section>
+        <section class="cvc">
+          <label for="cvc">cvc</label>
+          <input type="number" />
+        </section>
+        <button type="submit">Confirm</button>
+      </form>
+    </main>
+
     <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
     Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
     e.g. 123 Confirm -->
