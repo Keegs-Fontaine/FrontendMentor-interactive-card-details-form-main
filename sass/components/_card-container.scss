@@ -1,23 +1,33 @@
 @use "../globals" as *;
 
 .card-container {
-  padding-inline: 1rem;
+  position: relative;
+  height: 15rem;
+  margin-bottom: 3rem;
   background-image: url("../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
 
   > * {
     border-radius: 0.5rem;
   }
 
-  .card-front {
+  .card {
     @include flex(flex, space-between, start, column);
-    transform: translateY(50%);
+    position: absolute;
+    left: 50%;
     min-width: 15rem;
     width: 80%;
     max-width: 22rem;
     aspect-ratio: 1.85;
     padding: 1rem;
-    background-image: url("../images/bg-card-front.png");
     color: $clr-neutral-999;
+  }
+
+  .card-front {
+    background-image: url("../images/bg-card-front.png");
+    z-index: 100;
+    top: 50%;
+    transform: translateX(-55%);
 
     &__pfp {
       position: relative;
@@ -50,6 +60,18 @@
 
     &__name {
       @include flex();
+    }
+  }
+
+  .card-back {
+    transform: translateX(-46%);
+    background-image: url("../images/bg-card-back.png");
+
+    &__cvc {
+      position: absolute;
+      top: 50%;
+      right: 11%;
+      transform: translateY(-55%);
     }
   }
 }
